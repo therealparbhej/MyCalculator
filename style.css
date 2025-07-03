@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.wrapper {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  width: 320px;
+  padding: 20px;
+}
+.screen {
+  background: #e6dfdf;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 2rem;
+  text-align: right;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+.calc-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.calc-button-row {
+  display: flex;
+  gap: 10px;
+}
+.calc-button {
+  flex: 1;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #cac2c2;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.calc-button:hover {
+  background: #e0e0e0;
+}
+.double {
+  flex: 2;
+}
+.triple {
+  flex: 3;
+}
+@media (max-width: 400px) {
+  .wrapper {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .screen {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .calc-button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+body.dark {
+  background: linear-gradient(320deg, #232323, #3a3a3a, #1e1e1e);
+  color: #fff;
+}
+
+body.dark .wrapper {
+  background: rgba(30, 30, 30, 0.9);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark .screen {
+  background: #111;
+  color: #0f0;
+}
+
+body.dark .calc-button {
+  background: #333;
+  color: #fff;
+}
+
+body.dark .calc-button:hover {
+  background: #444;
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: #ddd5d5;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+body.dark .mode-toggle {
+  background-color: #444;
+  color: #fff;
+}
+.history {
+  margin-top: 10px;
+  max-height: 100px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  color: #444;
+}
+body.dark .history {
+  color: #aaa;
+}
+footer{
+    color: rgb(32, 32, 34);
+    font-size: 15px;
+    padding-left: 10px;
+
+}
